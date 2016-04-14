@@ -3,10 +3,12 @@
 {% assign age = 18 %}
 
 {% capture adult_header %}
-Welcome to Wonderland
+Adults only (18+)
 {% endcapture %}
 
 {% capture adult_text %}
+This website contains adult material and is only suitable for those 18 years or older. Click Enter only if you are at least 18 years of age.
+{% endcapture %}
 
 <div id="prompt-background">
   <div id="age-check-prompt" class="modal-prompt">
@@ -195,7 +197,7 @@ Welcome to Wonderland
    var theirDate = new Date((year + min_age), month, day);
    var today = new Date;
    if ((today.getTime() - theirDate.getTime()) < 0) {
-     window.location = 'http://olwomen.com/things-you-can-do-once-you-turn-18/'; //take them to this list of stuff they can do when they are 18.
+     window.location = 'http://google.com'; //enter domain url where you would like the underaged visitor to be sent to.
    } else {
      var days = 14; //number of days until they must go through the age checker again.
      var date = new Date();
@@ -244,7 +246,7 @@ Welcome to Wonderland
 }
 
 #prompt-background {
-  background: url("{{ 'ageverif-bg.jpg' | asset_url }}") no-repeat center center fixed #555;
+  background: url("{{ 'age-check-background.jpg' | asset_url }}") no-repeat center center fixed #555;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
